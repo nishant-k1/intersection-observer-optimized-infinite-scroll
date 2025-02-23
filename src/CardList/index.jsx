@@ -7,6 +7,8 @@ const CardsList = () => {
   const containerRef = useRef(null);
   const lastCardRef = useRef(null);
 
+  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -17,7 +19,7 @@ const CardsList = () => {
       },
       { threshold: 1 }
     );
-
+    
     if (lastCardRef.current) {
       observer.observe(lastCardRef.current);
     }
